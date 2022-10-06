@@ -1,0 +1,78 @@
+ 
+<html>
+  <head>
+    <title>Mask identifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+    <center>
+    <h1 class = "btn btn-danger">Mask Identification <br>
+    
+      <span>&#128567;</span>
+      <span>&#128577;</span>
+    </h1>
+  
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to enter office premises
+      	<br>
+        <b style="color: yellow">Danger</b>
+        <br>
+        <b style="color: black">SAFE</b>
+        <br>
+        
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam - </label>
+        <div id = "camera"></div>
+
+        <br><br>
+
+        <button class="btn btn-primary" onclick="Cap_image()">Capture IMAGE</button>
+        
+      </div>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+
+	      <label class = "btn btn-info">Prediction-1 - </label>
+        <br>
+        <h3 class = "mask_1" id = "result_prediction_name1"></h3>
+        <h3 class = "emoji" id = "result_emoji1"></h3>
+        
+        <label class = "btn btn-info">Prediction-2 - </label>
+        <br>
+        <h3 class = "mask_2" id = "result_prediction_name2"></h3>
+        <h3 class = "emoji" id = "result_emoji2"></h3>
+
+        <br><br>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id = "result"></div>
+
+        <br><br>
+        <button class = "btn btn-info" onclick="prediction()" >Predict Emotion</button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
